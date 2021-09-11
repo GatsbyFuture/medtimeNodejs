@@ -4,7 +4,7 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
-
+const readRouter = require('../routers/router_data');
 
 // export qilib qo'yamiz use f(x)larini...
 module.exports = function (app) {
@@ -18,6 +18,8 @@ module.exports = function (app) {
   console.log('dastur devlopment muhitida ishlayapti...');
  }
  app.use(helmet());
+
+ app.use('/data', readRouter);
 };
 
 
