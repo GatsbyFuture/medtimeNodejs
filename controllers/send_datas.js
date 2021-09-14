@@ -5,13 +5,39 @@ const joi = require('joi');
 class readController {
 
  async readData(req, res) {
+  let objData = {};
   try {
-   const answer = await popular_ads();
-   res.status(200).json({ result: 'ok', data: answer });
-  } catch (er) {
-   res.status(500).json('Malumotlarni o\'qishda xatolik : ' + er);
-   console.log('Bazadan qiymat olishda xatolik: ' + er);
+   objData.popular_ads = await popular_ads();
+  } catch (err) {
+   res.status(500).json('"popular_ads" dan o\'qishda xatolik : ' + err);
   }
+  try {
+   objData.ads = await ads();
+  } catch (err) {
+   res.status(500).json('"ads" dan o\'qishda xatolik : ' + err);
+  }
+  try {
+   objData.services = await services();
+  } catch (err) {
+   res.status(500).json('"services" o\'qib olishda xatolik');
+  }
+  try {
+   objData.doctors = await doctors();
+  } catch (err) {
+   res.status(500).json('"octors" o\'qib olishda xatolik');
+  }
+  try {
+   objData.news = await news();
+  } catch (err) {
+   res.status(500).json('"news" o\'qib olishda xatolik');
+  }
+  try {
+   objData.statistics = await statistics();
+  } catch (err) {
+   res.status(500).json('"news" o\'qib olishda xatolik');
+  }
+  // yig'ilgan malumotlarni bitta json formatda chirqarib yuborish...
+  res.status(200).json({ result: 'ok', data: objData});
  }
 
 }
