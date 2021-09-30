@@ -1,8 +1,9 @@
 // Asosiy packegdan obj olish...
 const mongoose = require("mongoose");
+const config = require("config");
 // Bazaga ulanishni tekshirib ko'rish...
 mongoose
-  .connect("mongodb://localhost/medtimeData", {
+  .connect(config.get("mainserver.db"), {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
