@@ -4,8 +4,11 @@
   "description": "Bu <Medplus> saitining bir qishmi sifatida ishlaydi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "14.16.0"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/GatsbyFuture/medtimeNodejs#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

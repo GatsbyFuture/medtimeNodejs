@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# herokuga joylash uchun ortiqcha filelarni olib tashaymiz..
+package-lock.json
 # User-specific files
 *.rsuser
 *.suo
