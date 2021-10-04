@@ -1,6 +1,6 @@
 {
-  "mainserver": {
-    "password": "passwordKey",
-    "db": "medtimeCode"
-  }
+    "mainserver": {
+        "password": "passwordKey",
+        "db": "passwordMed"
+    }
 }
