@@ -4,7 +4,7 @@ const router = Router();
 
 // admin panelni yasash uchun ejs filellaridan foydalanamiz...
 router.get("/login", function(req, res, next) {
-    res.render("login");
+    res.sendFile("../views/login");
 });
 // asosiy data to'ldirish menusi...
 router.get("/add", function(req, res, next) {
