@@ -25,7 +25,7 @@ module.exports = function(app) {
     app.use(helmet());
     app.use(compression());
     // login pagega kirish uchun
-    app.use("/", loginRoter);
+    app.use("/", readRouter);
     // user uchun asosiy CRUD ishlari...
     app.use("/data", readRouter);
 };
