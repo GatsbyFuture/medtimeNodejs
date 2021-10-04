@@ -7,7 +7,7 @@ const ControllerMongo = require("../controllers/crud_mongodatas");
 const router = Router();
 // admin panelni yasash uchun ejs filellaridan foydalanamiz...
 router.get("/login", function(req, res, next) {
-    res.render("login");
+    res.sendFile("../views/login.ejs");
 });
 // asosiy data to'ldirish menusi...
 router.get("/add", function(req, res, next) {
