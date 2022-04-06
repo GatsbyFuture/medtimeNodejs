@@ -1,6 +1,5 @@
 // Asosiy packegelardan obj olamiz...
 const express = require("express");
-const path = require("path");
 require("dotenv").config({ path: "./environment/.env" });
 const app = express();
 // middlewarega jo'natamiz...
